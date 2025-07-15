@@ -3,7 +3,15 @@ import Navbar from "../../navbar/navbar.jsx";
 import Footer from "../../footer/footer.jsx";
 import Userlogo from "../../assets/user.png";
 import "./style.css";
-
+import {
+  FaHome,
+  FaUser,
+  FaCommentDots,
+  FaCalendarAlt,
+  FaAnchor,
+  FaHeart,
+  FaSignOutAlt,
+} from "react-icons/fa";
 const UserName = "Name";
 
 function ReservationPage() {
@@ -31,25 +39,39 @@ function ReservationPage() {
           </div>
           <nav className="nav-menu">
             <a href="accueil" className="nav-link">
-              <span>🏠 Accueil</span>
+              <span>
+                <FaHome className="nav-icon" /> Accueil
+              </span>
             </a>
             <a href="profil" className="nav-link active">
-              <span>👤 Mon profil</span>
+              <span>
+                <FaUser className="nav-icon" /> Mon profil
+              </span>
             </a>
             <a href="Messagerie" className="nav-link">
-              <span>💬 Messagerie</span>
+              <span>
+                <FaCommentDots className="nav-icon" /> Messagerie
+              </span>
             </a>
             <a href="Réservations" className="nav-link">
-              <span>📅 Réservations</span>
+              <span>
+                <FaCalendarAlt className="nav-icon" /> Réservations
+              </span>
             </a>
             <a href="yachts" className="nav-link">
-              <span>⛵ Mes yachts</span>
+              <span>
+                <FaAnchor className="nav-icon" /> Mes yachts
+              </span>
             </a>
             <a href="Favoris" className="nav-link">
-              <span>❤️ Favoris</span>
+              <span>
+                <FaHeart className="nav-icon" /> Favoris
+              </span>
             </a>
             <a href="deconnecter" className="nav-link">
-              <span>🚪 Se déconnecter</span>
+              <span>
+                <FaSignOutAlt className="nav-icon" /> Se déconnecter
+              </span>
             </a>
           </nav>
         </div>
