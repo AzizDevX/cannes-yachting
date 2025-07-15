@@ -34,6 +34,9 @@ git clone https://github.com/AzizDevX/cannes-yachting.git
 # Navigate to project directory
 cd cannes-yachting
 
+# Navigate to project directory
+cd FrontEnd
+
 # Install dependencies
 npm install
 
