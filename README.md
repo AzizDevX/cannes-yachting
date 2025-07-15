@@ -1,5 +1,9 @@
 # Cannes Yachting - React Static Profile Page
 
+**💡 LIVE Demo**
+
+https://azizdevx.github.io/cannes-yachting
+
 A React static profile page for Cannes Yachting yacht services.
 
 ## 🚀 Features
