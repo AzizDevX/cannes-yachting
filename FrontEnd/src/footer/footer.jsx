@@ -1,100 +1,112 @@
 import React from "react";
-import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
-import FooterLogo from "../../src/assets/logo.png";
 import "./style.css";
+import { FaFacebook, FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
+
+import Payment from "../assets/payment.png";
+import FooterLogo from "../assets/logo.png";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-grid">
-          <div className="footer-section">
-            <div className="footer-logo">
-              <img src={FooterLogo} alt="Logo" />
-            </div>
-            <p className="footer-description">
-              Découvrez l'excellence du yachting de luxe. Locations, ventes et
-              expériences inoubliables en mer.
-            </p>
-            <div className="footer-social">
-              <a href="#" className="social-icon facebook">
-                <Facebook size={12} />
+    <footer>
+      <div className="container">
+        <div className="topfooter">
+          <div className="row">
+            <div className="col-md-3 col-sm-6">
+              <a href="#">
+                <img
+                  src={FooterLogo}
+                  alt="Cannes Yachting"
+                  className="logofooter"
+                />
               </a>
-              <a href="#" className="social-icon whatsapp">
-                <span>@</span>
-              </a>
-              <a href="#" className="social-icon youtube">
-                <Youtube size={12} />
-              </a>
-              <a href="#" className="social-icon linkedin">
-                <Linkedin size={12} />
-              </a>
-            </div>
-          </div>
-
-          <div className="footer-section">
-            <h3 className="footer-title">Liens rapides</h3>
-            <ul className="footer-links">
-              <li>
-                <a href="#">Accueil</a>
-              </li>
-              <li>
-                <a href="#">Location</a>
-              </li>
-              <li>
-                <a href="#">Vente</a>
-              </li>
-              <li>
-                <a href="#">À propos de nous</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Contact & Réservation</a>
-              </li>
-              <li>
-                <a href="#">Connexion / Inscription</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
-            <h3 className="footer-title">Contact</h3>
-            <div className="footer-contact">
-              <div>
-                <p>19 Rue de Letton-Maubourg</p>
-                <p>06400 Cannes</p>
-              </div>
-              <div>
-                <p>+33 6 59 39 05 69</p>
-                <p>+33 4 93 01 52 28</p>
-              </div>
-              <div>
-                <a href="mailto:contact@cannesyachting.fr">
-                  contact@cannesyachting.fr
+              <span className="descriptionfooter">
+                Découvrez l'excellence du yachting de luxe. Locations, ventes et
+                expériences inoubliables en mer.
+              </span>
+              <div className="reseauxSociaux">
+                <a href="#" aria-label="Facebook" className="social facebook">
+                  <FaFacebook size={20} />
+                </a>
+                <a href="#" aria-label="Instagram" className="social instagram">
+                  <FaInstagram size={20} />
+                </a>
+                <a href="#" aria-label="WhatsApp" className="social whatsapp">
+                  <FaWhatsapp size={20} />
+                </a>
+                <a href="#" aria-label="TikTok" className="social tiktok">
+                  <FaTiktok size={20} />
                 </a>
               </div>
             </div>
-          </div>
-
-          <div className="footer-section">
-            <h3 className="footer-title">Moyens de paiement</h3>
-            <div className="payment-methods">
-              <div className="payment-card visa"></div>
-              <div className="payment-card mastercard"></div>
-              <div className="payment-card cb"></div>
-              <div className="payment-card maestro"></div>
-              <div className="payment-card paypal"></div>
+            <div className="col-md-3 col-sm-6">
+              <span className="titlefooter">Liens rapides</span>
+              <ul>
+                <li>
+                  <a href="#">Accueil</a>
+                </li>
+                <li>
+                  <a href="#">Location</a>
+                </li>
+                <li>
+                  <a href="#">Vente</a>
+                </li>
+                <li>
+                  <a href="#">À propos de nous</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Contact & Réservation</a>
+                </li>
+                <li>
+                  <a href="#">Connexion / Inscription</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-md-3 col-sm-6">
+              <span className="titlefooter">Contact</span>
+              <ul>
+                <li>18 Rue de Latour-Maubourg</li>
+                <li>06400 Cannes</li>
+                <li>
+                  <a href="tel:+33649930969">+33 6 49 93 09 69</a>
+                </li>
+                <li>
+                  <a href="tel:+33493934299">+33 4 93 93 42 99</a>
+                </li>
+                <li>
+                  <a href="mailto:contact@cannesyachting.fr">
+                    contact@cannesyachting.fr
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-md-3 col-sm-6">
+              <span className="titlefooter">Moyens de paiement</span>
+              <img
+                className="img-responsive"
+                src={Payment}
+                alt="Payment methods"
+              />
             </div>
           </div>
         </div>
-
-        <div className="footer-bottom">
-          <p>
-            Cannes Yachting © 2025 Tous droits réservés | Powered by Aziz
-            Kammoun
-          </p>
+        <div className="bottomfooter">
+          <div className="row">
+            <div className="col-sm-12">
+              <span>
+                Cannes Yachting © 2025 Tous droits réservés |{" "}
+                <a
+                  href="https://www.deveoo.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Powered by Deveoo
+                </a>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
