@@ -1,9 +1,9 @@
 {
-  "name": "reservation",
+  "name": "cannes-yachting",
   "private": false,
   "version": "1.0.4",
   "type": "module",
-  "homepage": "https://azizdevx.github.io/",
+  "homepage": "https://azizdevx.github.io/cannes",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
