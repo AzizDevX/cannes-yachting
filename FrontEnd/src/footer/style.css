@@ -304,3 +304,88 @@ footer {
     max-width: 1600px;
   }
 }
+
+.profile-header {
+  background-color: #f8f9fa;
+  padding: 20px 30px;
+  border-bottom: 1px solid #e9ecef;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 80px; /* Add this line to ensure consistent height */
+}
+
+.profile-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 270px; /* Width of the side nav */
+  right: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 15px 30px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.sticky-placeholder {
+  height: 80px; /* Adjust to match the height of the sticky header */
+}
+
+.tab-btn.active {
+  background-color: #0d5087;
+  color: white;
+  border-color: #0d5087;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* For tablets and smaller desktops */
+@media (max-width: 992px) {
+  .profile-header.sticky {
+    left: 0; /* Full width when side nav might be hidden or different */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  /* Disable sticky behavior on mobile */
+  .profile-header.sticky {
+    position: static; /* Revert to normal flow */
+    box-shadow: none;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .sticky-placeholder {
+    display: none; /* No placeholder needed on mobile */
+  }
+
+  .profile-tabs {
+    flex-direction: row; /* Keep tabs in a row */
+    overflow-x: auto; /* Allow horizontal scrolling for tabs */
+    white-space: nowrap;
+    padding-bottom: 10px; /* Add some space for the scrollbar */
+  }
+}
+
+.profile-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  scroll-margin-top: 100px; /* Add this line */
+}
+
+/* Add this new CSS block */
+@media (max-width: 1200px) {
+  .profile-section {
+    scroll-margin-top: 120px; /* Larger margin for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    scroll-margin-top: 80px; /* Adjust for mobile */
+  }
+}

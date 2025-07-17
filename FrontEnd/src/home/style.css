@@ -1,0 +1,9 @@
+.Search {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+.Section-Continer {
+  display: flex;
+}
