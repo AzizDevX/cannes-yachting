@@ -5,13 +5,14 @@ import HomePage from "./home/index.jsx";
 import TempPage from "./TempPage.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="*" element={<TempPage />}></Route>
-        <Route path="/" element={<HomePage />}></Route>
-        <Route path="/profil" element={<ProfilePage />}></Route>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/profil" element={<ProfilePage />} />
+        <Route path="*" element={<TempPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
