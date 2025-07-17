@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/cannes">
+    <BrowserRouter basename="/cannes-yachting">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/profil" element={<ProfilePage />} />

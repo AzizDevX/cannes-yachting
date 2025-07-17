@@ -1,9 +1,9 @@
 {
   "name": "cannes-yachting",
   "private": false,
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
-  "homepage": "https://azizdevx.github.io/cannes",
+  "homepage": "https://azizdevx.github.io/cannes-yachting",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
