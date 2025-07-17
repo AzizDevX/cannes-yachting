@@ -1,7 +1,7 @@
 {
   "name": "reservation",
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "homepage": "https://azizdevx.github.io/",
   "scripts": {
