@@ -2,21 +2,9 @@ import React, { useRef, useState, useEffect } from "react";
 import Navbar from "../../navbar/navbar.jsx";
 import Footer from "../../footer/footer.jsx";
 import Userlogo from "../../assets/user.png";
+import SideNavbar from "../sidenavbar/sideNavbar.jsx";
 import "./style.css";
-import {
-  FaHome,
-  FaUser,
-  FaCommentDots,
-  FaCalendarAlt,
-  FaAnchor,
-  FaHeart,
-  FaSignOutAlt,
-  FaCloudUploadAlt,
-  FaFile,
-  FaTimes,
-} from "react-icons/fa";
-
-const UserName = "Name";
+import { FaCloudUploadAlt, FaFile, FaTimes } from "react-icons/fa";
 
 function ProfilePage() {
   const verificationRef = useRef(null);
@@ -72,7 +60,6 @@ function ProfilePage() {
       const documentHeight = document.documentElement.scrollHeight;
       const windowHeight = window.innerHeight;
       if (window.scrollY + windowHeight >= documentHeight - 10) {
-        // 10px buffer
         newActiveTab = sections[sections.length - 1].id; // Last section
       }
 
@@ -202,49 +189,7 @@ function ProfilePage() {
     <>
       <Navbar />
       <div className="page-container">
-        <div className="Side-Nav">
-          <div className="user-section">
-            <img src={Userlogo} alt="Logo" className="user-logo" />
-            <h2 className="user-name">{UserName}</h2>
-          </div>
-          <nav className="nav-menu">
-            <a href="accueil" className="nav-link">
-              <span>
-                <FaHome className="nav-icon" /> Accueil
-              </span>
-            </a>
-            <a href="profil" className="nav-link active">
-              <span>
-                <FaUser className="nav-icon" /> Mon profil
-              </span>
-            </a>
-            <a href="Messagerie" className="nav-link">
-              <span>
-                <FaCommentDots className="nav-icon" /> Messagerie
-              </span>
-            </a>
-            <a href="Réservations" className="nav-link">
-              <span>
-                <FaCalendarAlt className="nav-icon" /> Réservations
-              </span>
-            </a>
-            <a href="yachts" className="nav-link">
-              <span>
-                <FaAnchor className="nav-icon" /> Mes yachts
-              </span>
-            </a>
-            <a href="Favoris" className="nav-link">
-              <span>
-                <FaHeart className="nav-icon" /> Favoris
-              </span>
-            </a>
-            <a href="deconnecter" className="nav-link">
-              <span>
-                <FaSignOutAlt className="nav-icon" /> Se déconnecter
-              </span>
-            </a>
-          </nav>
-        </div>
+        <SideNavbar />
 
         <div className="main-content">
           {/* Fixed profile header with tabs */}
@@ -516,7 +461,7 @@ function ProfilePage() {
                 </div>
               </div>
 
-              <button className="btn-primary">Sauvegarde r</button>
+              <button className="btn-primary">Sauvegarder</button>
             </div>
 
             {/* Nautical CV Section */}
@@ -683,7 +628,7 @@ function ProfilePage() {
                 <label>Code BIC / SWIFT</label>
                 <input type="text" className="form-input" />
               </div>
-
+              <br></br>
               <button className="btn-primary">Sauvegarder</button>
             </div>
 
