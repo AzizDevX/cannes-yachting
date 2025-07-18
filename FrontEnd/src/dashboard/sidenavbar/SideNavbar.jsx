@@ -21,37 +21,37 @@ function SideNavbar() {
           <h2 className="user-name">{UserName}</h2>
         </div>
         <nav className="nav-menu">
-          <a href="accueil" className="nav-link">
+          <a href="/dashboard/accueil" className="nav-link">
             <span>
               <FaHome className="nav-icon" /> Accueil
             </span>
           </a>
-          <a href="profil" className="nav-link active">
+          <a href="/dashboard/profil" className="nav-link">
             <span>
               <FaUser className="nav-icon" /> Mon profil
             </span>
           </a>
-          <a href="Messagerie" className="nav-link">
+          <a href="/dashboard/Messagerie" className="nav-link">
             <span>
               <FaCommentDots className="nav-icon" /> Messagerie
             </span>
           </a>
-          <a href="Réservations" className="nav-link">
+          <a href="/dashboard/reservations" className="nav-link">
             <span>
               <FaCalendarAlt className="nav-icon" /> Réservations
             </span>
           </a>
-          <a href="yachts" className="nav-link">
+          <a href="/dashboard/mes-yachts" className="nav-link">
             <span>
               <FaAnchor className="nav-icon" /> Mes yachts
             </span>
           </a>
-          <a href="Favoris" className="nav-link">
+          <a href="/dashboard/Favoris" className="nav-link">
             <span>
               <FaHeart className="nav-icon" /> Favoris
             </span>
           </a>
-          <a href="deconnecter" className="nav-link">
+          <a href="/dashboard/deconnecter" className="nav-link">
             <span>
               <FaSignOutAlt className="nav-icon" /> Se déconnecter
             </span>

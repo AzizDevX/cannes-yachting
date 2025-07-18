@@ -4,7 +4,9 @@ import { createRoot } from "react-dom/client";
 import ProfilePage from "./dashboard/profile/profile.jsx";
 import HomePage from "./home/index.jsx";
 import TempPage from "./TempPage.jsx";
-
+import DashboardAccueil from "./dashboard/accueil/accueil.jsx";
+import Reservations from "./dashboard/reservations/reservations.jsx";
+import Yachts from "./dashboard/yachts/yachts.jsx";
 // 1. Use BrowserRouter
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -23,7 +25,11 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter basename="/cannes-yachting/">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/profil" element={<ProfilePage />} />
+        <Route path="/dashboard/accueil" element={<DashboardAccueil />} />
+        <Route path="/dashboard/profil" element={<ProfilePage />} />
+        <Route path="/dashboard/reservations" element={<Reservations />} />
+        <Route path="/dashboard/mes-yachts" element={<Yachts />} />
+
         <Route path="*" element={<TempPage />} />
       </Routes>
     </BrowserRouter>

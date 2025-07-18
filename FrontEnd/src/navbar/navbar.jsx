@@ -44,7 +44,7 @@ const Navbar = () => {
             <button className="icon-button" title="Notifications">
               <Bell size={20} />
             </button>
-            <a href="/profil">
+            <a href="/dashboard/profil">
               <button className="icon-button" title="Profile">
                 <User size={20} />
               </button>

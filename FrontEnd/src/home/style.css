@@ -786,6 +786,8 @@ button:focus {
 /* Newsletter Section */
 .BlocNewslettre {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background: url(./public/newslettre.jpg);
   background-size: cover;
   background-position: center;
@@ -808,6 +810,10 @@ button:focus {
 
 .newsletter-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
   min-width: 400px;
   margin: 25px auto;
   border-radius: 15px;

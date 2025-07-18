@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap");
+
+.page-container {
+  display: flex;
+  min-height: calc(100vh - 160px);
+}
+
+.main-content {
+  flex: 1;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 160px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.Welcome-Contient {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.Welcome-Contient h1 {
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.Welcome-paragraphe p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.Yacht-Section {
+  margin: 40px;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .main-content {
+    display: block;
+  }
+}
