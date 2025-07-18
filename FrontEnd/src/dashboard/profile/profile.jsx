@@ -185,6 +185,27 @@ function ProfilePage() {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [showFileModal]);
 
+  const [formValues, setFormValues] = useState({
+    input1: "",
+    input2: "",
+    input3: "",
+    input4: "",
+    input5: "",
+    input6: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    // Allow only digits
+    if (/^\d*$/.test(value)) {
+      setFormValues((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -300,15 +321,27 @@ function ProfilePage() {
               <div className="form-grid">
                 <div className="form-group">
                   <label>Prénom</label>
-                  <input type="text" className="form-input" />
+                  <input
+                    placeholder="Saisissez votre Prénom"
+                    type="text"
+                    className="form-input"
+                  />
                 </div>
                 <div className="form-group">
                   <label>Nom</label>
-                  <input type="text" className="form-input" />
+                  <input
+                    placeholder="Saisissez votre Nom"
+                    type="text"
+                    className="form-input"
+                  />
                 </div>
                 <div className="form-group">
                   <label>Email</label>
-                  <input type="email" className="form-input" />
+                  <input
+                    placeholder="Saisissez Votre Email"
+                    type="email"
+                    className="form-input"
+                  />
                 </div>
                 <div className="form-group">
                   <label>Sexe</label>
@@ -388,16 +421,31 @@ function ProfilePage() {
                       <option value="+32">Belgique +32</option>
                       <option value="+31">Pays-Bas +31</option>
                     </select>
-                    <input type="tel" className="form-input" />
+                    <input
+                      name="input1"
+                      value={formValues.input1}
+                      onChange={handleChange}
+                      placeholder="Numéro de Téléphone"
+                      type="tel"
+                      className="form-input"
+                    />
                   </div>
                 </div>
                 <div className="form-group">
                   <label>Adresse</label>
-                  <input type="text" className="form-input" />
+                  <input
+                    placeholder="Saisissez Votre Adresse"
+                    type="text"
+                    className="form-input"
+                  />
                 </div>
                 <div className="form-group">
                   <label>Code postal</label>
-                  <input type="text" className="form-input" />
+                  <input
+                    placeholder="Saisissez votre Code Postal"
+                    type="text"
+                    className="form-input"
+                  />
                 </div>
                 <div className="form-group">
                   <label>Ville</label>
@@ -436,27 +484,57 @@ function ProfilePage() {
                 <div className="form-grid">
                   <div className="form-group">
                     <label>Société</label>
-                    <input type="text" className="form-input" />
+                    <input
+                      placeholder="Nom de Société"
+                      type="text"
+                      className="form-input"
+                    />
                   </div>
                   <div className="form-group">
                     <label>Adresse</label>
-                    <input type="text" className="form-input" />
+                    <input
+                      placeholder="Adresse de Société"
+                      type="text"
+                      className="form-input"
+                    />
                   </div>
                   <div className="form-group">
                     <label>SIRET</label>
-                    <input type="text" className="form-input" />
+                    <input
+                      name="input2"
+                      value={formValues.input2}
+                      onChange={handleChange}
+                      placeholder="Numéro de Siret"
+                      type="text"
+                      className="form-input"
+                    />
                   </div>
                   <div className="form-group">
                     <label>TVA intracommunautaire</label>
-                    <input type="text" className="form-input" />
+                    <input
+                      name="input3"
+                      value={formValues.input3}
+                      onChange={handleChange}
+                      placeholder="TVA intracommunautaire"
+                      type="text"
+                      className="form-input"
+                    />
                   </div>
                   <div className="form-group">
                     <label>Site internet</label>
-                    <input type="url" className="form-input" />
+                    <input
+                      placeholder="Votre Site internet"
+                      type="url"
+                      className="form-input"
+                    />
                   </div>
                   <div className="form-group">
                     <label>Système de gestion de réservations</label>
-                    <input type="text" className="form-input" />
+                    <input
+                      placeholder="Système de gestion de réservations"
+                      type="text"
+                      className="form-input"
+                    />
                   </div>
                 </div>
               </div>
@@ -616,17 +694,38 @@ function ProfilePage() {
               <div className="form-grid">
                 <div className="form-group">
                   <label>IBAN</label>
-                  <input type="text" className="form-input" />
+                  <input
+                    name="input4"
+                    value={formValues.input4}
+                    onChange={handleChange}
+                    placeholder="numéro IBAN"
+                    type="text"
+                    className="form-input"
+                  />
                 </div>
                 <div className="form-group">
                   <label>Confirmez le numéro IBAN</label>
-                  <input type="text" className="form-input" />
+                  <input
+                    name="input5"
+                    value={formValues.input5}
+                    onChange={handleChange}
+                    placeholder="Confirmez le numéro IBAN"
+                    type="text"
+                    className="form-input"
+                  />
                 </div>
               </div>
 
               <div className="form-group">
                 <label>Code BIC / SWIFT</label>
-                <input type="text" className="form-input" />
+                <input
+                  name="input6"
+                  value={formValues.input6}
+                  onChange={handleChange}
+                  placeholder="Code BIC / SWIFT"
+                  type="text"
+                  className="form-input"
+                />
               </div>
               <br></br>
               <button className="btn-primary">Sauvegarder</button>

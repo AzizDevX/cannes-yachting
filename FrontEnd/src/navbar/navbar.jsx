@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Menu, X, Globe, Bell, User } from "lucide-react";
 import "./style.css";
 import NavLogo from "../../src/assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,10 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-content">
           <div className="logo">
-            <img src={NavLogo} alt="Logo" className="logo-image" />
+            <a href="/">
+              {" "}
+              <img src={NavLogo} alt="Logo" className="logo-image" />
+            </a>
           </div>
 
           <ul className="nav-links">
@@ -40,9 +44,11 @@ const Navbar = () => {
             <button className="icon-button" title="Notifications">
               <Bell size={20} />
             </button>
-            <button className="icon-button" title="Profile">
-              <User size={20} />
-            </button>
+            <a href="/profil">
+              <button className="icon-button" title="Profile">
+                <User size={20} />
+              </button>
+            </a>
           </div>
 
           <button className="mobile-menu-button" onClick={toggleMenu}>
