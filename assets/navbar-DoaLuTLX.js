@@ -1,4 +1,4 @@
-import{r as i,j as e,L as n}from"./index-BUoV0xFI.js";import{N as k}from"./footer-B8vzLq71.js";/**
+import{r as i,j as e,L as n}from"./index-BWe7dZGW.js";import{N as k}from"./footer-guzsM0Yq.js";/**
  * @license lucide-react v0.525.0 - ISC
  *
  * This source code is licensed under the ISC license.
